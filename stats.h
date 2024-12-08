@@ -9,19 +9,52 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <header files> 
+ * @brief <Here is the header files stats. We declare the differents function needed for the Week1 application of the class introduction-embedded-systems>
  *
  * <Add Extended Description Here>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Yannick Dahan>
+ * @date <08/12/2024 >
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+
+/**
+ * @brief < Given an array of data and a length, returns the minimume>
+ *
+ * 
+ *
+ * @param <unsigned char *X> <array of data>
+ * @param <size_t size> <lenght of the array>
+ * @return <return the minimum value>
+ */
+unsigned char find_minimum(unsigned char *X, size_t size);
+
+
+/* Given an array of data and a length, returns the maximum */ 
+unsigned char find_maximum(unsigned char *X, size_t size);
+
+
+/* Given an array of data and a length, returns the mean */ 
+double find_mean(unsigned char *X, size_t size);
+
+
+/* Given an array of data and a length, sorts the array from largest to smallest.  (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. ) */ 
+void sort_array(unsigned char *X, size_t size);
+
+
+/* A function that prints the statistics of an array including minimum, maximum, mean, and median. */ 
+void print_statistic(unsigned char *X, size_t size);
+
+
+/* Given an array of data and a length, prints the array to the screen */ 
+void print_array(unsigned char *X, size_t size);
+
+unsigned char find_median(unsigned char *X, size_t size);
+
 
 /**
  * @brief <Add Brief Description of Function Here>
