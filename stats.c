@@ -44,7 +44,8 @@ unsigned char test2[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
   /* Statistics and Printing Functions Go Here */
 print_statistic(test2, SIZE);
 print_array(test, SIZE);
-
+printf("sorted array\n");
+print_array(test2,SIZE);
 }
 
 
@@ -71,7 +72,7 @@ unsigned char find_maximum(unsigned char *X, size_t size){
 return(max);
 }
 
-double find_mean(unsigned char *X, size_t size){
+char find_mean(unsigned char *X, size_t size){
   double sum = 0;
     size_t i;
     for (i = 0; i < size; i++){
@@ -82,7 +83,7 @@ return(sum/size);
 
 unsigned char find_median(unsigned char *X, size_t size){
   sort_array(X, size);
-  return(X[size/2-1]);
+  return(X[size/2]);
 }
 
 
@@ -105,7 +106,7 @@ void sort_array(unsigned char *X, size_t size){
 
 void print_statistic(unsigned char *X, size_t size){
 printf("here is the maximum value of this chart :%u \n",find_maximum(X,size));
-printf("here is the mean value of this chart: %f \n",find_mean(X,size));
+printf("here is the mean value of this chart: %u \n",find_mean(X,size));
 printf("here is the minimum value of this chart: %u \n",find_minimum(X,size) );
 printf("here is the median value of this chart: %u \n",find_median(X,size));
 }
